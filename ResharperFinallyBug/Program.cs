@@ -25,7 +25,8 @@ namespace ResharperFinallyBug
             }
             catch
             {
-                //ReSharper is telling me that success is not used and implying it is safe to delete.
+                //Turns out, this isn't a ReSharper bug, but potentially a VS Bug
+                //Visual Studio is telling me that success is not used and implying it is safe to delete.
                 //however, if I delete it, then there is a bug in the finally block.
                 success = false;
                 throw;
